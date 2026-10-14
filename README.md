@@ -15,9 +15,9 @@ This project implements multiple classical **edge detection algorithms** on a se
 
 ## **Dataset & Input**
 
-- Images are read from a folder (e.g., `images/`)  
-- Corresponding ground truth edges are stored in a separate folder (e.g., `GroundTruths/`)  
-- Specific image IDs can be selected for processing  
+- Images are read from a folder (e.g., `images/`) or uploaded in the Streamlit app.  
+- Corresponding ground truth edges can be provided to compute metrics.  
+- Specific image IDs can be selected for processing in notebook workflows.  
 
 ---
 
@@ -30,11 +30,28 @@ This project implements multiple classical **edge detection algorithms** on a se
    - **F1 Score**  
    - **Accuracy (%)**
 5. Visualize and save comparison results.  
-6. Export quantitative results to CSV.
+6. Export quantitative results to CSV.  
+
+---
+
+## **Run Streamlit App**
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+The app lets you:
+- Upload an input image.
+- Tune detector thresholds.
+- View outputs for all four detectors.
+- Optionally upload ground truth edges and view F1/accuracy.
+- Download edge outputs as PNG files.
 
 ---
 
 ## **Requirements**
 
 ```bash
-pip install numpy pandas matplotlib opencv-python scikit-learn
+pip install -r requirements.txt
+```
